@@ -52,7 +52,7 @@ class Staff extends \Uni\Controller\AdminManagerIface
 
         $filter = array(
             'courseId' => $this->getConfig()->getCourseId(),
-            'type' => \Uni\Db\Role::TYPE_STAFF,
+            'type' => \Uni\Db\User::TYPE_STAFF,
             'active' => true
         );
         $this->getTable()->setList($this->getTable()->findList($filter));

@@ -64,12 +64,12 @@ class Edit extends \Uni\Controller\AdminEditIface
                 break;
             case 'staff':
                 $staff = \App\Db\UserMap::create()->findFiltered(
-                    array('courseId' => $this->coa->courseId, 'type' => \Uni\Db\Role::TYPE_STAFF), \Tk\Db\Tool::create('RAND()'))->current();
+                    array('courseId' => $this->coa->courseId, 'type' => \Uni\Db\User::TYPE_STAFF), \Tk\Db\Tool::create('RAND()'))->current();
                 $adapter = new \Coa\Adapter\User($this->coa, $staff);
                 break;
             case 'student':
                 $student = \App\Db\UserMap::create()->findFiltered(
-                    array('subjectId' => $this->getConfig()->getSubjectId(), 'type' => \Uni\Db\Role::TYPE_STUDENT), \Tk\Db\Tool::create('RAND()'))->current();
+                    array('subjectId' => $this->getConfig()->getSubjectId(), 'type' => \Uni\Db\User::TYPE_STUDENT), \Tk\Db\Tool::create('RAND()'))->current();
                 $adapter = new \Coa\Adapter\User($this->coa, $student);
                 break;
         }

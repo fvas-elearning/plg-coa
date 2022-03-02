@@ -54,7 +54,7 @@ class Student extends \Uni\Controller\AdminManagerIface
 
         $filter = array(
             'subjectId' => $this->getConfig()->getSubjectId(),
-            'type' => \Uni\Db\Role::TYPE_STUDENT,
+            'type' => \Uni\Db\User::TYPE_STUDENT,
             'active' => true
         );
         $this->getTable()->setList($this->getTable()->findList($filter));

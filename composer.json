@@ -1,6 +1,6 @@
 {
-    "name": "ttek-plg/plg-coa",
-    "type": "ttek-plugin",
+    "name": "uom-plg/plg-coa",
+    "type": "uom-plugin",
     "description": "EMS COA plugin, Send Certificates Of Appreciation to companies/staff/students.",
     "keywords":  [
         "tropotek",
@@ -23,6 +23,7 @@
         }
     },
     "require":  {
-        "mpdf/mpdf": "~7.0"
+        "mpdf/mpdf": "~8.0.0"
     }
 }
+
